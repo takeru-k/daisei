@@ -1,0 +1,30 @@
+@use "../setting/setting";
+.l-page-header {
+  background: url(../images/common/boards.jpg) no-repeat center center/cover;
+}
+
+.l-page-header__heading {
+  text-align: center;
+  padding: 120px 0 64px;
+}
+
+.l-page-header__heading span {
+  text-transform: uppercase;
+  color: #fff;
+  font-family: setting.$font-english;
+  font-weight: 400;
+  font-size: clamp(2.5rem, 1.227rem + 6.36vw, 6rem);
+  letter-spacing: 2px;
+  line-height: 1.2;
+}
+
+.l-page-header__heading h2 {
+  color: #fff;
+  font-size: clamp(1.125rem, 0.989rem + 0.68vw, 1.5rem);
+}
+
+@media (min-width: 1024px) {
+  .l-page-header__heading {
+    padding: 120px 0 64px;
+  }
+}

@@ -1,0 +1,72 @@
+@use "../setting/setting";
+
+.l-footer {
+  padding: 40px 6% 24px;
+  background: #212a37;
+}
+
+.l-footer__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.l-footer__contents {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.l-footer__logo {
+  color: #a6adb6;
+  font-size: clamp(1.125rem, 1.034rem + 0.45vw, 1.375rem);
+}
+
+.l-footer__address {
+  color: #a6adb6;
+  font-size: 14px;
+  margin-top: 8px;
+}
+
+.l-footer__menu {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.l-footer__menu li {
+  color: #a6adb6;
+}
+
+.l-footer__copy {
+  font-size: 12px;
+  color: #555;
+  margin-top: 64px;
+  display: block;
+  font-family: "Jost", sans-serif;
+}
+
+@media (min-width: 1024px) {
+  .l-footer {
+    padding: 64px 40px 40px;
+  }
+
+  .l-footer__logo {
+    width: 200px;
+  }
+
+  .l-footer__contents {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .l-footer__menu {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 40px;
+    align-items: center;
+  }
+
+  .l-footer__copy {
+    text-align: right;
+  }
+}

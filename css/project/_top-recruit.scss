@@ -1,0 +1,28 @@
+@use "../setting/setting";
+
+.p-top-recruit {
+  padding: 40px 0;
+}
+
+.p-top-recruit__content {
+  background: url(../images/top/top-recruit2.jpg) no-repeat top center/cover;
+  padding: 16px;
+  margin: 16px auto 0;
+  text-align: justify;
+  max-width: 880px;
+}
+
+.p-top-recruit__content p {
+  margin: 0 auto 8px;
+  color: #fff;
+  max-width: 600px;
+}
+
+@media (min-width: 1024px) {
+  .p-top-recruit {
+    padding: 64px 0;
+  }
+  .p-top-recruit__content {
+    padding: 48px;
+  }
+}

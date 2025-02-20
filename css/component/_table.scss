@@ -1,0 +1,37 @@
+@use "../setting/setting";
+.c-table {
+  width: 100%;
+  max-width: 720px;
+  margin: 24px auto 0;
+  border-collapse: collapse;
+}
+
+.c-table > th,
+td {
+  border-top: 1px solid #eaeaea;
+  border-bottom: 1px solid #eaeaea;
+}
+
+.c-table th {
+  width: 100px;
+  text-align: left;
+  vertical-align: top;
+  font-weight: normal;
+  padding: 24px 0;
+}
+
+.c-table td {
+  padding: 24px 0 24px 12px;
+}
+
+@media (min-width: 1024px) {
+  .c-table {
+    margin-top: 40px;
+  }
+
+  .c-table th {
+    width: 25%;
+    max-width: 200px;
+    padding-left: 12px;
+  }
+}
