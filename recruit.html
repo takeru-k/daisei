@@ -13,13 +13,25 @@
       rel="stylesheet"
     />
 
+    <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
     <header class="l-header js-header">
       <div class="l-header__inner">
         <p class="l-header__logo">
-          <a href="index.html">有限会社大盛印刷</a>
+          <a href="index.html">
+            <img
+              src="images/header/logo-blue.svg"
+              alt=""
+              class="l-header__logo--sp"
+            />
+            <img
+              src="images/header/logo.svg"
+              alt=""
+              class="l-header__logo--pc"
+            />
+          </a>
         </p>
         <!-- /.l-header__logo -->
 
@@ -59,10 +71,9 @@
     </div>
     <!-- /.l-page-header -->
 
-    <section class="c-section">
+    <section class="c-block">
       <div class="l-inner">
-        <!-- タブのコンテナ -->
-        <ul class="c-tab__list">
+        <ul class="c-tab">
           <li class="c-tab__item active">仕事内容</li>
           <!-- /.c-tab__item -->
           <li class="c-tab__item">募集要項</li>
@@ -71,9 +82,8 @@
           <!-- /.c-tab__item -->
         </ul>
 
-        <!-- コンテンツのコンテナ -->
         <div class="c-tab__wrap">
-          <section class="c-section content show">
+          <section class="c-block content show">
             <div class="p-recruit__content">
               <div class="p-recruit__heading">
                 <h3><span>会社規模</span>について</h3>
@@ -91,14 +101,14 @@
                 <div class="p-recruit__desc">
                   <h4>創業は1978年です</h4>
                   <p>
-                    消耗品分野なので景気変動に強く、リーマンショック、震災、そしてコロナ禍といった困難な時期でも、受注が落ち込むことはありませんでした。安定した経営基盤のもと、長く安心して働ける環境が整っています。
+                    消耗品分野なので景気変動に強く、リーマンショック、震災、そしてコロナ禍といった困難な時期でも受注が落ち込むことはありませんでした。安定した経営基盤のもと、長く安心して働ける環境が整っています。
                   </p>
                 </div>
                 <!-- /.p-recruit__desc -->
 
                 <div class="p-recruit__desc">
                   <h4>社員数は33人です</h4>
-                  <p>平均年齢は44歳で、男女比はちょうど半々くらいです。</p>
+                  <p>平均年齢は44歳で、男女比はちょうど半々ぐらいです。</p>
                 </div>
                 <!-- /.p-recruit__desc -->
               </div>
@@ -216,9 +226,9 @@
             </div>
             <!-- /.p-recruit__content -->
           </section>
-          <!-- /.c-section -->
+          <!-- /.c-block -->
 
-          <section class="c-section content">
+          <section class="c-block content">
             <div class="p-recruit__table">
               <dl>
                 <dt>雇用形態</dt>
@@ -243,9 +253,9 @@
             </div>
             <!-- /.p-recruit__table -->
           </section>
-          <!-- /.c-section -->
+          <!-- /.c-block -->
 
-          <section class="c-section p-contact content">
+          <section class="c-block p-contact content">
             <div class="p-contact__body">
               <div class="p-contact__lead">
                 <p>下記フォームへ必要事項をご記入いただき送信してください。</p>
@@ -261,7 +271,9 @@
                     <tbody>
                       <tr>
                         <th>
-                          <label for="company" class="inputLabel">お名前</label>
+                          <label for="company" class="inputLabel"
+                            >お名前<span class="require">*</span></label
+                          >
                         </th>
                         <td>
                           <div class="inputField">
@@ -388,12 +400,12 @@
             </div>
             <!-- /.p-contact__body -->
           </section>
-          <!-- /.c-section -->
+          <!-- /.c-block -->
         </div>
       </div>
       <!-- /.l-inner -->
     </section>
-    <!-- /.c-section -->
+    <!-- /.c-block -->
 
     <footer class="l-footer">
       <div class="l-footer__inner">
