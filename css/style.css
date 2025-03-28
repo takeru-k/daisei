@@ -48,10 +48,13 @@ body {
   color: #fff;
 }
 
+.u-inline-auto{
+margin-inline: auto;
+}
+
 .u-width-720{
   max-width: 720px;
-  margin-right: auto;
-  margin-left: auto;
+  margin-inline: auto;
 }
 
 /*-------------------------
@@ -93,6 +96,7 @@ body {
     align-items: center;
   }
 }
+
 
 /*-------------------------
   見出し
@@ -344,6 +348,12 @@ body {
   color: #fff;
 }
 
+@media not screen and (min-width: 768px){
+  .c-cta__button{
+    margin: 36px auto 0;
+  }
+}
+
 @media (min-width: 768px) {
   .c-cta {
     padding: 88px 0;
@@ -408,10 +418,24 @@ body {
   text-transform: uppercase;
   font-weight: bold;
   color: var(--font-color);
+  position: relative;
 }
 
-.l-header__menu li:hover {
-  color: var(--main-color);
+.l-header__menu li:after {
+  position: absolute;
+  left: 0;
+  content: '';
+  width: 100%;
+  height: 2px;
+  background: #fff;
+  bottom: -1px;
+  transform: scale(0, 1);
+  transform-origin: left top;
+  transition: transform 0.2s;
+}
+
+.l-header__menu li:hover::after{
+  transform: scale(1,-1);
 }
 
 .l-header__logo {
@@ -526,7 +550,7 @@ body {
     /* メニューを横に */
     display: flex;
     gap: 40px;
-    text-shadow: 0 0 10px rgba(0, 0, 0, .4);
+    text-shadow: 0 0 10px rgba(0, 0, 0, .8);
   }
 
   .l-header__menu li{
@@ -534,9 +558,7 @@ body {
   }
 }
 
-.current-menu-item {
-  color: var(--main-color);
-}
+
 
 /*-------------------------
   ハンバーガーメニュー
@@ -650,7 +672,25 @@ body {
 }
 
 .l-footer__menu li {
-  color: #fff;
+  color: #d9d9d9;
+  position: relative;
+}
+
+.l-footer__menu li:after {
+  position: absolute;
+  left: 0;
+  content: '';
+  width: 100%;
+  height: 2px;
+  background: #d9d9d9;
+  bottom: -1px;
+  transform: scale(0, 1);
+  transform-origin: left top;
+  transition: transform 0.2s;
+}
+
+.l-footer__menu li:hover::after{
+  transform: scale(1,-1);
 }
 
 .l-footer__copy {
@@ -688,12 +728,18 @@ body {
 =================================*/
 /* メインビジュアル */
 .p-main-visual {
-  background: url(../images/top/mv.jpg) no-repeat center center/cover;
+  background: url(../images/top/mv-sp.jpg) no-repeat center center/cover;
   height: 74vh;
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+@media (min-width: 768px){
+  .p-main-visual{
+    background: url(../images/top/mv.jpg) no-repeat center center/cover;
+  }
 }
 
 .p-main-visual__copy {
@@ -739,22 +785,9 @@ body {
   background: url(../images/top/top-recruit-background.jpg) no-repeat top center/cover;
   position: relative;
   height: 100%;
+  background-attachment: fixed;
 }
 
-@media not all and (min-width: 1023px){
-
-  /* 固定背景レイヤー */
-.p-top-recruit__bg {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: url(../images/top/top-recruit-background-sp.jpg) no-repeat top left/cover;
-  z-index: -1;
-  opacity: 1;
-  }
-}
 
 .p-top-recruit__title{
   display: flex;
@@ -977,12 +1010,25 @@ body {
 .l-page-header {
   background: url(../images/common/page-header.jpg) no-repeat center center/cover;
   object-position: top;
+  position: relative;
+}
+
+.l-page-header::after{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  content: '';
+  background: linear-gradient(to top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.3) 100%);
+
 }
 
 .l-page-header__heading {
   text-align: center;
   padding: 120px 0 64px;
-  text-shadow: 0 0 20px rgba(0, 0, 0, .8);
+  text-shadow: 0 0 20px rgba(0, 0, 0, .6);
+  z-index: 2;
 }
 
 .l-page-header__heading span {
