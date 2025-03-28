@@ -98,6 +98,12 @@ $(function () {
     });
   });
 
+  $(function() {
+	setTimeout(function(){
+		$('.js-time-out').fadeIn(1600);
+	},500); 
+});
+
   // ウィンドウスクロール時のフェードイン処理
   const fadeIn = function () {
     const target = document.getElementsByClassName('js-fade-in');
